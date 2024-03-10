@@ -1,0 +1,17 @@
+2. What are some examples of how PHP and JavaScript are alike and how they differ?
+    Javascript and PHP are similar because they are both used (together) to create dynamic, user-tailored websites. Both
+    languages are object oriented, and used to send and request data to a server/database. Both languages have loosely-typed
+    variables, which means that variable types do not need to be explicitly declared. Both languages support logic,
+    arithmetic, conditionals, scope, functions, and objects. Javascript is different from PHP because Javascript processes
+    scripts on the user’s computer, or the ‘front end.’ PHP, unlike Javascript, processes scripts on the server, or the
+    ‘back end.’
+
+3. Define MVC, what are the responsibilities of each piece?
+    MVC; or Model, View, Controller; is an architectural and design pattern that separates applications into three main
+    logical components. Each component, or logical layer, is built to handle specific aspects of an application. The Model
+    component is concerned with all the data-related logic that the user works with. The model interacts with the database
+    and gives the required data back to the controller. The View component generates a user interface, concerning itself
+    with all of the UI logic of an application. Views are generated via interacts with the controller, to use data
+    collected by the model. The Controller serves as an intermediary between the Model and the View. The Controller does not
+    handle data logic, simply instructing the model. It processes incoming requests, manipulates data using the Model, and 
+    interacts with the View to render the UI. 
