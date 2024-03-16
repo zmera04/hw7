@@ -12,6 +12,7 @@ use app\controllers\PostController;
 
 $url = $_SERVER["REQUEST_URI"];
 
+
 switch($url)
 {
     //if it is "/" return the homepage view from the main controller
@@ -22,15 +23,16 @@ switch($url)
 
     //if it is "/posts" return an array of posts via the post controller
     case('/posts'):
-        $getPosts = new PostController();
-        $getPosts -> loadInput();
-
         if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
             $postInput = new PostController();
-            $postInput -> savePost();
+            $postInput -> savePost();            
         }
-        
+        else if($_SERVER['REQUEST_METHOD'] === 'GET')
+        {
+            $getPosts = new PostController();
+            $getPosts -> loadInput();        
+        }   
         break;
 
     //if it is something else return a 404 view from the main controller
@@ -38,5 +40,5 @@ switch($url)
         $get404 = new MainController();
         $get404 -> notFound();
         break;
-}
+    }
 ?>

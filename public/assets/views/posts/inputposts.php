@@ -13,9 +13,8 @@
                         name: name,
                         description: description
                     }
-
                     $.ajax({
-                        url: "http://localhost.8888/posts",
+                        url: "http://localhost:8888/posts",
                         type: "POST",
                         data: data,
                         dataType: 'json',
